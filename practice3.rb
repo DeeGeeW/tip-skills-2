@@ -47,8 +47,11 @@ def convert(array)
   users.each do |k, v|
     while i < array.length
       if k == array[i][:submitted_by]
-        new_hash[v] = 
-        p new_hash
+        new_hash[:submitted_by] = v
+        value = v
+        
+        # new_hash[array[i]] = value
+        # p new_hash
       end
       # if array[i][submitted_by:] == k
       #   value = k
