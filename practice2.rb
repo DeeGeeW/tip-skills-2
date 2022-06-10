@@ -31,4 +31,4 @@ def common_p(array)
 
 end
 
-p common_p(["flower","flow","flight"])
+p common_p(["dog","racecar","car"])
