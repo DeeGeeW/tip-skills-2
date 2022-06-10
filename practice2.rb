@@ -19,7 +19,7 @@
 def common_p(array)
   i = 0
   common = ""
-  while i < array.length
+  while i < array[i].length
     if array[0][i] == array[1][i] && array[0][i] == array[2][i]
       common << array[0][i]
       i +=1
@@ -31,4 +31,4 @@ def common_p(array)
 
 end
 
-p common_p(["dog","racecar","car"])
+p common_p(["flower","flow","flight"])
