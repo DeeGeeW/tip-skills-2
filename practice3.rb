@@ -45,20 +45,15 @@ def convert(array)
   new_array = []
   users = {403 => "Aunty Em", 231 => "Joelle P.", 900 => "Lyndon b", 100 => "Patti."}
   users.each do |k, v|
-    while i < array.length
+  while i < array.length
       if k == array[i][:submitted_by]
-        new_hash[:submitted_by] = v
-        value = v
-        
-        # new_hash[array[i]] = value
-        # p new_hash
+        array[i][:submitted_by] = v
+        new_array << array[i]
+        i += 1
       end
-      # if array[i][submitted_by:] == k
-      #   value = k
-      #   p value
-      # end
       i += 1
     end
+    return new_array
   end
 
 
@@ -67,7 +62,7 @@ def convert(array)
     
 end
 
-convert([
+p convert([
   {title: 'Me Eating Pizza', submitted_by: 231, likes: 1549},
   {title: 'i never knew how cool i was until now', submitted_by: 989, likes: 3},
   {title: 'best selfie evar!!!', submitted_by: 111, likes: 1092},
