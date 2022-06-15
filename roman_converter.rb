@@ -13,19 +13,25 @@ def roman_to_int(s)
   num_values = []
   string.each do |char|
       num_values << roman_nums[char]
-      p num_values
   end
   
   total = 0
   num_values.each_with_index do |num, index|
-      if num_values[index + 1] && num >= num_values[index + 1]
-          total += num 
-      else
-          total -= num 
-      end
+    if num_values[index + 1] && num >= num_values[index + 1]
+        total += num
+        
+    else
+        total -= num
+    end
   end
+#   num_values.each_with_index do |num, index|
+#       if num_values[index + 1] && num >= num_values[index + 1]
+#           total += num 
+#       else
+#           total -= num 
+#       end
+#   end
   
   total
 end
-
 p roman_to_int("MCMXCIV")
