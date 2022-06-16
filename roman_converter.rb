@@ -54,11 +54,12 @@ def roman_to_int(s)
           "M" => 1000
       } 
       while true
-      if roman_nums[s[i]] > roman_nums[s[i + 1]]
+      if roman_nums[s[i]] >= roman_nums[s[i + 1]]
         count += roman_nums[s[i]]
         if (i + 1) == s.length - 1
           count += roman_nums[s[i + 1]]
           return count
+          break
         end
         
       else
@@ -66,6 +67,7 @@ def roman_to_int(s)
         if (i + 1) == s.length - 1
           count += roman_nums[s[i + 1]]
           return count
+          break
         end
       end
         
@@ -73,4 +75,4 @@ def roman_to_int(s)
     end
 end
 
-p roman_to_int("MCMXCIVI")
+p roman_to_int("MCMXCIV")
