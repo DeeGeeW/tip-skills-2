@@ -1,4 +1,4 @@
-def correct_symbols(s)
+def is_valid(s)
     curly_o = 0
     curly_c = 0
      
@@ -31,12 +31,6 @@ def correct_symbols(s)
     else
       p "Not Valid"
     end
-    # p curly_o
-    # p curly_c
-    # p parenthesis_o
-    # p parenthesis_c
-    # p square_o
-    # p square_c 
   end
 
- correct_symbols("(]")
+ is_valid("(]")
