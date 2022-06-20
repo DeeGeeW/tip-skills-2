@@ -26,7 +26,7 @@ def is_valid(s)
       end
       i += 1
     end
-    if curly_o == curly_c && parenthesis_o == parenthesis_c && square_o == square_c
+    if curly_o == curly_c && parenthesis_o == parenthesis_c && square_o == square_c 
      p "Valid"
     else
       p "Not Valid"

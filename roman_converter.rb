@@ -70,9 +70,9 @@ def roman_to_int(s)
           break
         end
       end
-        
-        i += 1
+      i += 1
     end
+  end
 end
 
 p roman_to_int("MCMXCIV")
