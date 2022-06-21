@@ -16,7 +16,6 @@
 #   {title: 'Mondays ar', submitted_by: 222, likes: 644}
 #   ]
 
-
 # And this hash of users (the key is the id number and the value is the user's real name):
 
 # users = {403 => "Aunty Em", 231 => "Joelle P.", 900 => "Lyndon b", 100 => "Patti."}
@@ -43,28 +42,22 @@ def convert(array)
   i = 0
   new_hash = {}
   new_array = []
-  users = {403 => "Aunty Em", 231 => "Joelle P.", 900 => "Lyndon b", 100 => "Patti."}
+  users = { 403 => "Aunty Em", 231 => "Joelle P.", 900 => "Lyndon b", 100 => "Patti." }
   users.each do |k, v|
-  while i < array.length
-      if k == array[i][:submitted_by]
-        array[i][:submitted_by] = v
-        new_array << array[i]
-        i += 1
-      end
-      i += 1
-    end
-    return new_array
+    i = 0
+    # if k == array[i][:submitted_by]
+    array[i][:submitted_by] = v
+    new_array << array[i]
+    i += 1
+    # end
+    # i += 1
   end
-
-
-        
-      
-    
+  return new_array
 end
 
 p convert([
-  {title: 'Me Eating Pizza', submitted_by: 231, likes: 1549},
-  {title: 'i never knew how cool i was until now', submitted_by: 989, likes: 3},
-  {title: 'best selfie evar!!!', submitted_by: 111, likes: 1092},
-  {title: 'Mondays are the worst', submitted_by: 403, likes: 644}
+    { title: "Me Eating Pizza", submitted_by: 231, likes: 1549 },
+    { title: "i never knew how cool i was until now", submitted_by: 989, likes: 3 },
+    { title: "best selfie evar!!!", submitted_by: 111, likes: 1092 },
+    { title: "Mondays are the worst", submitted_by: 403, likes: 644 },
   ])
